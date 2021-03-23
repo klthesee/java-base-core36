@@ -1,36 +1,13 @@
 package com.zk;
 
+import com.zk.entity.Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Test39_Stream_to_collection {
-    static class Student {
-        private Integer id;
-        private String name;
-
-        public Student(Integer id, String name) {
-            this.id = id;
-            this.name = name;
-        }
-
-        public Integer getId() {
-            return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-    }
+public class Test41_Stream_to_collection {
 
     public static void main(String[] args) {
         Student stu1 = new Student(1, "lbw");

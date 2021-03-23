@@ -1,5 +1,7 @@
 package com.zk;
 
+import com.zk.entity.Student;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -9,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * 删除list中元素
  */
-public class Test38 {
+public class Test40_stream_to_col_list {
 
     public static void main(String[] args) {
         Integer[] a = {1,2,3,4};
@@ -49,32 +51,6 @@ public class Test38 {
             }
         }
         System.out.println();
-    }
-
-    static class Student{
-        private Integer id;
-        private String username;
-
-        public Student(Integer id, String username) {
-            this.id = id;
-            this.username = username;
-        }
-
-        public Integer getId() {
-            return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
     }
 
 
