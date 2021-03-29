@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 
 @Component
 //@Lazy(false)
-public class Test37_Client implements BeanPostProcessor {
+public class Test37_Client {
 //    private Test37_NotBean test37_notBean;
     public void test01() {
         Test37_NotBean test37_notBean = new Test37_NotBean();
@@ -23,19 +23,5 @@ public class Test37_Client implements BeanPostProcessor {
 //    public void createnewBean(){
 //        test37_notBean = new Test37_NotBean();
 //    }
-
-    @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("lbw postProcessBeforeInitialization");
-        return null;
-    }
-
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-//        test37_notBean.useBean();
-        System.out.println("lbw postProcessAfterInitialization");
-
-        return null;
-    }
 
 }

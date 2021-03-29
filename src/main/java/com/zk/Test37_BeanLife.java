@@ -10,6 +10,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 /**
  * Aware 注入的意思
  * ApplicationContextAware：注入ApplicationContext当前实例中,
@@ -18,8 +20,7 @@ import org.springframework.stereotype.Component;
  * BeanNameAware：
  */
 @Component
-public class Test37_BeanLife implements BeanPostProcessor {
-
+public class Test37_BeanLife {
 
 
     public Test37_BeanLife() {
@@ -35,15 +36,8 @@ public class Test37_BeanLife implements BeanPostProcessor {
         System.out.println("静态代码块");
     }
 
-    @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("Test37_BeanLife==postProcessBeforeInitialization" +"B");
-        return null;
-    }
-
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("Test37_BeanLife==postProcessAfterInitialization == A");
-        return null;
+    @PostConstruct()
+    public void init() {
+        System.out.println("bean init()");
     }
 }

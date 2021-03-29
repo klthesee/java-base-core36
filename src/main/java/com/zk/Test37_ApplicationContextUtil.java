@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-@Lazy(false)
 public class Test37_ApplicationContextUtil implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext = null;
